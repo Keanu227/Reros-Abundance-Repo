@@ -1,0 +1,48 @@
+// server.js
+const express = require("express");
+const cors = require("cors");
+
+const app = express();
+const PORT = 3000;
+
+// Middleware
+app.use(cors());               // Allow requests from your frontend
+app.use(express.json());       // Parse JSON bodies
+
+// Health check
+app.get("/", (req, res) => {
+  res.json({ status: "OK", service: "666-Hop NFT Backend" });
+});
+
+// POST /mint — mock mint endpoint
+app.post("/mint", (req, res) => {
+  const { recipient, tokenURI } = req.body;
+
+  // Basic validation
+  if (!recipient || !tokenURI) {
+    return res.status(400).json({
+      success: false,
+      error: "Missing required fields: recipient and tokenURI",
+    });
+  }
+
+  // Mock transaction ID (replace with real Web3/ethers integration later)
+  const mockTxId = `0x${Math.random().toString(16).slice(2)}${Date.now().toString(16)}`;
+
+  // Simulate success response
+  return res.status(200).json({
+    success: true,
+    message: "Mint request received",
+    data: {
+      recipient,
+      tokenURI,
+      txId: mockTxId,
+      network: "mock",
+    },
+  });
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`666-Hop backend running on http://localhost:${PORT}`);
+});
