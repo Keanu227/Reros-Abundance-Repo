@@ -1,3 +1,9 @@
+console.log(`
+Clarity in code, trust in design,
+Every line builds freedom, every step defines.
+I start with focus, I run with intent,
+My app is my vision, my energy well-spent.
+`);
 // server.js
 const express = require("express");
 const cors = require("cors");
