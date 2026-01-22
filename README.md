@@ -1,3 +1,15 @@
+console.log(`
+Clarity in code, trust in design,
+Every line builds freedom, every step defines.
+I start with focus, I run with intent,
+My app is my vision, my energy well-spent.
+`);
+
+const express = require("express");
+const app = express();
+
+// ...rest of your backend code
+
 # Rerosperity‑NFT‑Hub 🚀
 
 A *666‑Hop‑powered NFT minting hub where creators **crank up abundance* — *mint, **list, and **watch* *your* *digital* *assets* *flourish* 🔥.
