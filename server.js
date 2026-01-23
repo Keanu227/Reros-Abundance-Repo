@@ -6,42 +6,38 @@ I start with focus, I run with intent,
 My app is my vision, my energy well-spent.
 `);
 
-// server.js
 const express = require("express");
 const cors = require("cors");
 const app = express();
 const PORT = 3000;
 
 // Middleware
-app.use(cors());            // Allow requests from your frontend
-app.use(express.json());    // Parse JSON bodies
+app.use(cors());
+app.use(express.json());
 
-// Health check
+// Health check route
 app.get("/", (req, res) => {
   res.json({ status: "OK", service: "666-Hop NFT Backend" });
 });
 
-// POST /mint — mock mint endpoint
+// Mint route (mock)
 app.post("/mint", (req, res) => {
   const { recipient, tokenURI } = req.body;
 
-  // Basic validation
   if (!recipient || !tokenURI) {
     return res.status(400).json({
       success: false,
-      error: "Missing required fields: recipient and tokenURI",
+      error: "Missing required fields: recipient and tokenURI"
     });
   }
 
-  // Mock transaction ID (replace with real Web3/ethers integration later)
   const mockTxId = `0x${Math.random().toString(16).slice(2)}${Date.now().toString(16)}`;
 
-  // Respond with success
   res.json({
     success: true,
     txId: mockTxId,
     recipient,
-    tokenURI,
+    tokenURI
   });
 });
 
