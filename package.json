@@ -1,16 +1,4 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "main": "backendserver.js",
-  "dependencies": {
-    "express": "^4.18.2"
-  },
-  "scripts": {
-    "start": "node backendserver.js"
-  }
-}
-
-{
   "name": "666-hop-backend",
   "version": "1.0.0",
   "description": "Backend for 666-Hop NFT minting",
