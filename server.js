@@ -1,4 +1,3 @@
-}
 // Mantra
 console.log(`
 Clarity in code, trust in design,
