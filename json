@@ -1,5 +1,5 @@
-{
-  "name": "666-hop-backend",
+{ "status": "OK", "service": "666-Hop NFT Backend" }
+ "name": "666-hop-backend",
   "version": "1.0.0",
   "description": "Backend for 666-Hop NFT minting",
   "main": "server.js",
