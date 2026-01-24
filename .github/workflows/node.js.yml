@@ -1,3 +1,7 @@
+cd C:\path\to\Reros-Abundance-Repo
+dir              # confirm package.json and server.js are listed
+npm install      # installs dependencies
+npm run dev      # starts the server
 // Print your mantra when the server starts
 console.log(`
 Clarity in code, trust in design,
