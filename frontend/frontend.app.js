@@ -1,3 +1,4 @@
+}
 document.getElementById('mint-btn').addEventListener('click', async () => {
   const recipient = "0x1234567890abcdef1234567890abcdef12345678"; // replace with connected wallet
   const tokenURI = "ipfs://Qm.../metadata.json"; // replace with your NFT metadata URI
