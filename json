@@ -1,4 +1,5 @@
-{ "status": "OK", "service": "666-Hop NFT Backend" }
+{app.use(express.static("frontend"));
+ "status": "OK", "service": "666-Hop NFT Backend" }
  "name": "666-hop-backend",
   "version": "1.0.0",
   "description": "Backend for 666-Hop NFT minting",
