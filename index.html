@@ -1,75 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>666‑Hop NFT</title>
-    <link href="https:                                                                                    
-    <style>
-        body {
-            font-family: 'Orbitron', sans-serif;
-            background: radial-gradient(circle,                           
-            color:      
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 4rem;
-            color:         
-            text-shadow: 0 0 10px         
-        }
-        .cta-button {
-            padding: 15px 30px;
-            background:         
-            color:      
-            font-size: 1.2rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .cta-button:hover {
-            background:         
-            transform: scale(1.05);
-        }
-                      
-            margin: 20px auto;
-            width: 300px;
-            height: 300px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
-        }
-                          
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Reros Abundance App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>666‑Hop NFT</h1>
-            <p>Where crypto meets craft brew</p>
-        </header>
-        <button id="mint-btn" class="cta-button">Mint 666‑Hop</button>
-        <div id="nft-preview">
-            <img src="https://ipfs.io/ipfs/Qm.../flower-nft.png" alt="Flower NFT">
-        </div>
-    </div>
-
-    <script>
-        document.getElementById('mint-btn').addEventListener('click', () => {
-            // 🚀 OpenSea "Create Item" URL (fill in your collection URL)
-            const openSeaCreateUrl = 'https:                                                 
-            window.open(openSeaCreateUrl, '_blank');
-        });
-    </script>
+  <h1>Reros Abundance NFT Hub</h1>
+  <form id="mintForm">
+    <input type="text" id="recipient" placeholder="Recipient Address" required>
+    <input type="text" id="tokenURI" placeholder="Token URI" required>
+    <button type="submit">Mint NFT</button>
+  </form>
+  <pre id="output"></pre>
+  <script src="frontend.app.js"></script>
 </body>
 </html>
