@@ -1,3 +1,31 @@
+const express = require("express");
+const cors = require("cors");
+const path = require("path");
+const app = express();
+const PORT = 3000;
+
+app.use(cors());
+app.use(express.json());
+
+// Serve frontend
+app.use(express.static(path.join(__dirname, "frontend")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend", "index.html"));
+});
+
+app.post("/mint", (req, res) => {
+  const { recipient, tokenURI } = req.body;
+  if (!recipient || !tokenURI) {
+    return res.status(400).json({ success: false, error: "Missing recipient or tokenURI" });
+  }
+  const mockTxId = `0x${Math.random().toString(16).slice(2)}${Date.now().toString(16)}`;
+  res.json({ success: true, txId: mockTxId, recipient, tokenURI });
+});
+
+app.listen(PORT, () => {
+  console.log(`Backend running on http://localhost:${PORT}`);
+});
 app.use(express.static("frontend"));
 // Mantra
 console.log(`
