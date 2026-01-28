@@ -1,0 +1,27 @@
+Rerosperity-NFT-Hub/
+├── frontend/                      # React/Tailwind UI
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── public/
+│   │   └── index.html
+│   ├── package.json               # Frontend dependencies
+│   └── tailwind.config.js
+├── backend/                       # Node.js/Express API
+│   ├── server.js                  # Main server file
+│   ├── routes/
+│   │   ├── nft.js                 # NFT operations
+│   │   └── auth.js                # Authentication
+│   ├── models/
+│   │   ├── NFT.js                 # MongoDB schema for NFTs
+│   │   └── User.js
+│   ├── config/
+│   │   └── db.js                  # MongoDB connection
+│   ├── package.json               # Backend dependencies
+│   └── .env.example               # Environment variables
+├── .gitignore                     # Files to ignore in Git
+├── README.md                      # Project description
+├── package.json                   # Root package.json (for workspaces/scripts)
+└── vercel.json                    # Vercel deployment configuration (we'
