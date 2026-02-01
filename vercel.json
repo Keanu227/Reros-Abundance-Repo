@@ -1,9 +1,8 @@
-{
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "outputDirectory": "dist"
-}
+Reros-Abundance-Repo/
+├── frontend/          ← **Root Directory in Vercel**
+│    ├── package.json
+│    ├── src/
+│    └── vite.config.js
+├── vercel.json
+├── README.md
+└── .github/workflows
