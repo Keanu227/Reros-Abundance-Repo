@@ -1,65 +1,44 @@
-Reros-Abundance-Repo/
-│
-├── package.json      ← paste the JSON here (line 1 must start with `{`)
-├── server.js         ← paste your backend code here
-├── node_modules/     ← created automatically after `npm install`
-└── (other files like README.md, .gitignore, etc.)
-console.log(`
-Clarity in code, trust in design,
-Every line builds freedom, every step defines.
-I start with focus, I run with intent,
-My app is my vision, my energy well-spent.
-`);
+# 🔥 Rerosperity NFT Hub 🚀
 
-const express = require("express");
-const app = express();
+A **666-Hop-powered NFT minting hub** where creators crank up abundance — mint, list, and watch digital assets flourish.
 
-// ...rest of your backend code
+> Clarity in code. Trust in design. Every line builds freedom.
 
-# Rerosperity‑NFT‑Hub 🚀
+---
 
-A *666‑Hop‑powered NFT minting hub where creators **crank up abundance* — *mint, **list, and **watch* *your* *digital* *assets* *flourish* 🔥.
+## 🎨 Features
 
-🎨 Features
-- *Gas‑less* *minting* *on* *Ethereum* *&* *Polygon*  
-- *Edgy* *UI* *(mask* *+* *fire* *+* *666* *typography)*  
-- *Royalty* *up* *to* *10%* *on* *secondary* *sales*  
-- *Simple* *API* *for* *front‑end* *↔* *back‑end* *communication*  
+- Gas-less NFT minting (Ethereum & Polygon)
+- Creator-first royalty system (up to 10%)
+- Edgy, high-contrast UI
+- Simple API for frontend ↔ backend
+- Built for Web3 expansion
 
-🛠️ Tech Stack
-- *Front‑End*: HTML5, CSS3, JavaScript (ES6)  
-- *Back‑End*: Node.js + Express  
-- *Blockchain*: Ethereum / Polygon (Web3.js)  
-- *Database*: MongoDB  
+---
 
-📦 Getting Started
-1. *Clone* *repo*  
-   
+## 🛠️ Tech Stack
+
+**Frontend**
+- HTML5
+- CSS3
+- JavaScript (ES6)
+
+**Backend**
+- Node.js
+- Express
+
+**Blockchain**
+- Ethereum
+- Polygon (Web3.js – planned)
+
+**Database**
+- MongoDB (planned)
+
+---
+
+## 📦 Getting Started
+
+### Clone
 ```bash
-   git clone https://github.com/keanu-joseph/rerosperity-nft-hub.git
-   
-
-2. Install deps
-   npm install
-   
-
-3. Run dev server
-   npm run dev
-   
-
-🌟 Usage
-- Mint NFT via UI or API
-- List NFT for sale on marketplace
-- Track sales and royalties in dashboard
-
-🤝 Contribute
-Pull requests welcome — fork repo and submit your fire 🚀.
-
-📜 License
-MIT License — free to use and modify
-
-📞 Contact
-Keanu Joseph — Twitter @keanu_j
-
-Ready to crank up your README and fuel the launch of Rerosperity‑NFT‑Hub? Let’s roll! 🔥
-
+git clone https://github.com/Keanu227/Reros-Abundance-Repo.git
+cd Reros-Abundance-Repo
