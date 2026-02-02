@@ -5,9 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
+  },
   "engines": {
-  "node": "24.x"
-}
+    "node": "24.x"
+  },
   "dependencies": {
     "express": "^4.19.2"
   }
