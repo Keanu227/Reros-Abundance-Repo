@@ -1,3 +1,4 @@
+// ----------------- Wallet & NFT Setup -----------------
 let provider;
 let signer;
 let contract;
@@ -8,43 +9,17 @@ const mintBtn = document.getElementById("mintNFT");
 const mintStatus = document.getElementById("mintStatus");
 const gallery = document.getElementById("nftGallery");
 
-// ✅ Replace this with your deployed contract address
+// Replace with your deployed contract address
 const contractAddress = "YOUR_CONTRACT_ADDRESS_HERE";
 
-// ✅ ERC721 ABI (minimal, just what we need)
+// Minimal ERC721 ABI
 const abi = [
-  {
-    "inputs": [],
-    "stateMutability": "nonpayable",
-    "type": "constructor"
-  },
-  {
-    "inputs": [
-      {"internalType": "address","name":"recipient","type":"address"},
-      {"internalType": "string","name":"tokenURI","type":"string"}
-    ],
-    "name":"mintNFT",
-    "outputs":[{"internalType":"uint256","name":"","type":"uint256"}],
-    "stateMutability":"nonpayable",
-    "type":"function"
-  },
-  {
-    "inputs":[{"internalType":"uint256","name":"","type":"uint256"}],
-    "name":"tokenURI",
-    "outputs":[{"internalType":"string","name":"","type":"string"}],
-    "stateMutability":"view",
-    "type":"function"
-  },
-  {
-    "inputs":[],
-    "name":"tokenCounter",
-    "outputs":[{"internalType":"uint256","name":"","type":"uint256"}],
-    "stateMutability":"view",
-    "type":"function"
-  }
+  { "inputs": [], "name":"tokenCounter", "outputs":[{"internalType":"uint256","name":"","type":"uint256"}], "stateMutability":"view","type":"function" },
+  { "inputs":[{"internalType":"uint256","name":"","type":"uint256"}], "name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}], "stateMutability":"view","type":"function" },
+  { "inputs":[{"internalType":"address","name":"recipient","type":"address"},{"internalType":"string","name":"tokenURI","type":"string"}],"name":"mintNFT","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function" }
 ];
 
-// 🌟 Connect Wallet
+// Connect wallet
 connectBtn.addEventListener("click", async () => {
   if (!window.ethereum) {
     walletStatus.textContent = "MetaMask not detected ❌";
@@ -59,29 +34,23 @@ connectBtn.addEventListener("click", async () => {
     const accounts = await provider.send("eth_requestAccounts", []);
     walletStatus.textContent = `Connected: ${accounts[0]}`;
 
-    await loadAllNFTs(); // load gallery after connecting
+    await loadAllNFTs();
   } catch (err) {
     console.error(err);
     walletStatus.textContent = "Connection rejected ❌";
   }
 });
 
-// 🌟 Mint NFT
+// Mint NFT
 mintBtn.addEventListener("click", async () => {
-  if (!contract || !signer) {
-    alert("Connect wallet first!");
-    return;
-  }
+  if (!contract || !signer) return alert("Connect wallet first!");
 
   try {
-    // Replace with your actual metadata URL
-    const tokenURI = "https://example.com/nft.json"; 
+    const tokenURI = "https://example.com/nft.json"; // Replace with your metadata
     const tx = await contract.mintNFT(await signer.getAddress(), tokenURI);
     await tx.wait();
 
     mintStatus.textContent = "NFT minted successfully ✅";
-
-    // Reload gallery with new NFT
     await loadAllNFTs();
   } catch (err) {
     console.error(err);
@@ -89,11 +58,10 @@ mintBtn.addEventListener("click", async () => {
   }
 });
 
-// 🌟 Load all NFTs from contract
+// Load all NFTs dynamically
 async function loadAllNFTs() {
   if (!contract) return;
-
-  gallery.innerHTML = ""; // clear old content
+  gallery.innerHTML = "";
 
   let total;
   try {
@@ -118,3 +86,38 @@ async function loadAllNFTs() {
     }
   }
 }
+
+// ----------------- AI Wealth Guide -----------------
+const chatLog = document.getElementById("chatLog");
+const userInput = document.getElementById("userInput");
+const sendBtn = document.getElementById("sendMessage");
+
+sendBtn.addEventListener("click", async () => {
+  const text = userInput.value.trim();
+  if (!text) return;
+
+  // User message
+  const userMsg = document.createElement("div");
+  userMsg.textContent = `🧠 You: ${text}`;
+  chatLog.appendChild(userMsg);
+
+  userInput.value = "";
+
+  const aiMsg = document.createElement("div");
+  aiMsg.textContent = "🔥 AI Guide: ...thinking";
+  chatLog.appendChild(aiMsg);
+
+  try {
+    const res = await fetch("/api/ai", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: text }),
+    });
+
+    const data = await res.json();
+    aiMsg.textContent = `🔥 AI Guide: ${data.reply}`;
+  } catch (err) {
+    console.error(err);
+    aiMsg.textContent = "⚠️ Energy turbulence detected — AI Guide temporarily offline.";
+  }
+});
