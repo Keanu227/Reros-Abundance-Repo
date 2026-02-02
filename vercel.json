@@ -1,8 +1,15 @@
-Reros-Abundance-Repo/
-├── frontend/          ← **Root Directory in Vercel**
-│    ├── package.json
-│    ├── src/
-│    └── vite.config.js
-├── vercel.json
-├── README.md
-└── .github/workflows
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ]
+}
