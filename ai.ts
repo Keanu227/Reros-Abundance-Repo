@@ -1,4 +1,3 @@
-// api/ai.js
 import OpenAI from "openai";
 
 const openai = new OpenAI({
@@ -23,7 +22,7 @@ export default async function handler(req, res) {
             "You are the AI Wealth Guide for Rerosperity NFT Hub. Answer questions about NFTs, wealth, manifestation, and prosperity in an encouraging, clear tone."
         },
         { role: "user", content: message }
-      ],
+      ]
     });
 
     const reply = completion.choices[0].message.content;
