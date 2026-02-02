@@ -1,15 +1,19 @@
 {
-  "name": "reros-abundance-repo",
+  "name": "rerosperity-nft-hub",
   "version": "1.0.0",
-  "description": "Rerosperity NFT Hub backend",
-  "main": "server.js",
+  "description": "666-Hop NFT Hub with AI Wealth Guide",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "vercel dev",
+    "dev": "vercel dev",
+    "build": "echo 'Vercel handles build'"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "openai": "^5.2.0",
+    "ethers": "^6.9.0"
   },
   "engines": {
     "node": "24.x"
-  },
-  "dependencies": {
-    "express": "^4.19.2"
   }
 }
