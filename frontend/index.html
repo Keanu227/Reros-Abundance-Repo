@@ -3,25 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <title>Rerosperity NFT Hub</title>
-
-  <!-- Kill favicon 404 -->
   <link rel="icon" href="data:," />
-
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.9.0/dist/ethers.min.js"></script>
 </head>
 <body>
   <h1>🔥 Rerosperity NFT Hub</h1>
-<p>Mint. List. Prosper.</p>
+  <p>Mint. List. Prosper.</p>
 
-<button id="connectWallet">Connect Wallet</button>
+  <button id="connectWallet">Connect Wallet</button>
+  <p id="walletStatus">Not connected</p>
 
-<p id="walletStatus">Not connected</p>
+  <button id="mintNFT">Mint NFT</button>
+  <p id="mintStatus"></p>
 
-<button id="check">Check API</button>
-<pre id="output"></pre>
-
-<script src="app.js"></script>
-
+  <h2>NFT Gallery</h2>
+  <div id="nftGallery"></div>
 
   <script src="app.js"></script>
 </body>
