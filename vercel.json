@@ -9,3 +9,8 @@
     { "src": "/(.*)", "dest": "/frontend/index.html" }
   ]
 }
+{
+  "build": {
+    "outputDirectory": ".next"
+  }
+}
