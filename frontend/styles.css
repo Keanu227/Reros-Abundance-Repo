@@ -5,6 +5,60 @@ body {
   padding: 2rem;
 }
 
-h1 {
+h1, h2 {
   color: #ff4500;
+}
+
+button {
+  background: #ff4500;
+  border: none;
+  padding: 12px 18px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+#walletStatus, #mintStatus {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+#nftGallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.nftCard {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  padding: 10px;
+  width: 200px;
+}
+
+#ai-guide {
+  margin-top: 2rem;
+}
+
+#chatLog {
+  background: #111;
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+#userInput {
+  padding: 8px;
+  width: 70%;
+  margin-right: 5px;
+}
+
+#sendMessage {
+  padding: 8px 12px;
 }
